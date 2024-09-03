@@ -1,0 +1,309 @@
+/*
+ * (C) Bitxor Community 2022 
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and limitations under the License.
+ *
+ */
+/*
+ * (C) Bitxor Community 2022 
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and limitations under the License.
+ *
+ */
+/**
+ * Skin
+ **/
+@font-face {
+    font-family: 'noto-sans-bold';
+    src: url('./NotoSans-Bold.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'noto-sans-extrabold';
+    src: url('./NotoSans-ExtraBold.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'noto-sans-light';
+    src: url('./NotoSans-Light.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'noto-sans-medium';
+    src: url('./NotoSans-Medium.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'noto-sans-regular';
+    src: url('./NotoSans-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'noto-sans-semibold';
+    src: url('./NotoSans-SemiBold.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+/**
+ * Elements outline
+ **/
+/**
+ * Fonts
+ **/
+.import-profile-wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.import-profile-wrapper .create-profile-box {
+    margin-bottom: 40px;
+    font-size: 40px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.85);
+    line-height: 40px;
+}
+.import-profile-wrapper .step-bar-container .step-text-container span {
+    width: 25%;
+}
+.import-profile-wrapper .explanation-box {
+    flex: 0.3;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    min-height: calc(100vh - 255px);
+}
+.import-profile-wrapper .explanation-box .text-wrapper {
+    display: block;
+    width: 85%;
+}
+.import-profile-wrapper .explanation-box .text1 {
+    color: #117492;
+    font-size: 30px;
+    font-family: 16px;
+    margin-bottom: 5%;
+}
+.import-profile-wrapper .explanation-box .text {
+    color: #117492;
+    font-size: 18px;
+    margin-bottom: 2%;
+}
+.import-profile-wrapper .explanation-box .text_red {
+    color: #117492;
+    font-family: 'noto-sans-semibold';
+    font-size: 18px;
+}
+.import-profile-wrapper .form-box {
+    flex: 0.7;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    min-height: calc(100vh - 255px);
+}
+.import-profile-wrapper .form-box .steps {
+    width: 25%;
+    height: 100%;
+    display: flex;
+}
+.import-profile-wrapper .form-box .steps .step-group {
+    margin: auto;
+    width: 100%;
+}
+.import-profile-wrapper .form-box .steps .single-step {
+    display: flex;
+    padding: 8% 5% 8% 5%;
+    font-size: 18px;
+    color: #d3d3d3;
+    font-family: 'noto-sans-semibold';
+}
+.import-profile-wrapper .form-box .steps .single-step .check-container {
+    min-width: 0.25rem;
+    width: 0.25rem;
+}
+.import-profile-wrapper .form-box .steps .single-step .check-container img {
+    display: none;
+    width: 15px;
+}
+.import-profile-wrapper .form-box .steps .single-step.done {
+    color: #117492;
+    display: flex;
+    align-items: center;
+}
+.import-profile-wrapper .form-box .steps .single-step.done .check-container img {
+    display: block;
+}
+.import-profile-wrapper .form-box .steps .single-step.active {
+    background: linear-gradient(315.55deg, #007dbb -1.68%, #25c3f1 110.7%)
+    color: #ffffff;
+}
+.import-profile-wrapper .form-box .form {
+    flex: 1;
+    padding: 0 10%;
+    width: 75%;
+    border-left: 0.5px solid #d3d3d3;
+    min-height: calc(100vh - 255px);
+    display: flex;
+    align-items: center;
+}
+.import-profile-wrapper .inner-container .create-profile-box {
+    margin-bottom: 40px;
+    font-size: 40px;
+    color: rgba(0, 0, 0, 0.85);
+    line-height: 40px;
+}
+.import-profile-wrapper .inner-container .step-bar-container .step-text-container span {
+    width: 20%;
+}
+.accounts-container {
+    background: #ffffff;
+    height: 5rem;
+    padding: 0.3rem;
+}
+.accounts-container .accounts-container-title {
+    font-size: 22px;
+    color: #117492;
+    font-weight: bolder;
+}
+.accounts-container .address-list-container {
+    position: relative;
+    width: 100%;
+    padding: 10px 0 5px 0;
+    font-size: 13px;
+    color: rgba(51, 51, 51);
+}
+.accounts-container .address-id {
+    margin-right: 15px;
+}
+.accounts-container .right-container-title {
+    font-size: 0.22rem;
+    color: #333333;
+    padding: 0.1rem 0 0.2rem 0;
+    font-weight: bolder;
+}
+.accounts-container .remove-icon img {
+    width: 21px;
+    height: 21px;
+}
+.address-list {
+    font-size: 0.16rem;
+}
+.address-list .scroll {
+    max-height: 520px;
+}
+.address-list .table-item,
+.address-list .table-title {
+    width: 100%;
+    padding: 5px 0;
+    color: #117492;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.address-list .table-title {
+    font-weight: bold;
+    justify-content: flex-start;
+}
+.address-list .table-title .address-id {
+    position: relative;
+}
+.address-list .table-item {
+    padding: 5px 0;
+    border-bottom: 1px solid #e0dfe5;
+}
+.address-list .table-item:hover {
+    color: #1fb6ac;
+    background-color: rgba(38, 180, 176, 0.1);
+}
+.address-list .table-item:last-of-type {
+    border-bottom: 1px solid transparent;
+}
+.address-list .address-id {
+    width: 20px !important;
+    position: relative;
+}
+.address-list .address-id img {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    left: 20px;
+}
+.address-list .address-balance {
+    width: 120px;
+}
+.address-list .amount-display-container {
+    font-size: 0.12rem;
+}
+.address-list .address-item {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto 1fr;
+}
+.address-list .address-list-body {
+    overflow-y: auto;
+    margin-right: -0.3rem;
+    padding-right: 0.3rem;
+    max-height: 3.93rem;
+}
+.button-container {
+    display: flex;
+    padding-top: 20px;
+    align-items: center;
+    width: 700px;
+}
+.button-container button {
+    margin-top: 20px;
+    height: 50px;
+}
+.selection-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 20px;
+}
+.selection-container .network-type {
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    width: 40%;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+/deep/ .form-row {
+    width: 100%;
+}
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.flex-start {
+    align-items: flex-start;
+}
+.text-big {
+    font-size: 35px !important;
+    margin-top: 50px;
+}

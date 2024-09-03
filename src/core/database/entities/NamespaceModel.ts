@@ -1,0 +1,59 @@
+/*
+ * (C) Bitxor Community 2022
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and limitations under the License.
+ *
+ */
+
+import { NamespaceInfo } from 'bitxor-sdk';
+import { MetadataModel } from './MetadataModel';
+
+/**
+ * Stored POJO that holds namespace information.
+ *
+ * The stored data is cached from rest.
+ *
+ * The object is serialized and deserialized to/from JSON. no method or complex attributes can be
+ * fined.
+ *
+ */
+export class NamespaceModel {
+    public readonly namespaceIdHex: string;
+    public readonly name: string;
+    public readonly isRoot: boolean;
+    public readonly ownerAddressRawPlain: string | undefined;
+    public readonly aliasType: number;
+    public readonly aliasTargetAddressRawPlain: string | undefined;
+    public readonly aliasTargetTokenIdHex: string | undefined;
+    public readonly parentNamespaceIdHex: string | undefined;
+    public readonly startHeight: number;
+    public readonly endHeight: number;
+    public readonly depth: number;
+    public metadataList: MetadataModel[];
+
+    constructor(namespaceInfo: NamespaceInfo, name: string, metadataList: MetadataModel[] = []) {
+        this.namespaceIdHex = namespaceInfo.id.toHex();
+        this.name = name;
+        this.isRoot = namespaceInfo.isRoot();
+        this.aliasType = namespaceInfo.alias.type;
+        this.ownerAddressRawPlain = namespaceInfo.ownerAddress.plain();
+        this.aliasTargetAddressRawPlain =
+            (namespaceInfo.alias && namespaceInfo.alias.address && namespaceInfo.alias.address.plain()) || undefined;
+        this.aliasTargetTokenIdHex =
+            (namespaceInfo.alias && namespaceInfo.alias.tokenId && namespaceInfo.alias.tokenId.toHex()) || undefined;
+        this.parentNamespaceIdHex = this.isRoot ? undefined : namespaceInfo.parentNamespaceId().toHex();
+        this.startHeight = namespaceInfo.startHeight.compact();
+        this.endHeight = namespaceInfo.endHeight.compact();
+        this.depth = namespaceInfo.depth;
+        this.metadataList = metadataList;
+    }
+}

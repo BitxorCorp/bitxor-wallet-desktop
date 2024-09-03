@@ -1,0 +1,75 @@
+@import '../../../views/resources/css/variables.less';
+
+.transaction-header-container {
+    display: grid;
+   // padding-top: 0.1rem;
+   // padding-left: 3%;
+   align-items: center;
+    width: 100%;
+    grid-template-rows: 100%;
+    font-size: @normalFont;
+    text-align: left;
+    //background-color: white;
+    font-family: @bitxorFontMedium !important;
+    position: sticky;
+    top: 0;
+    justify-items: center;
+    //padding: 0.15rem 0;
+    z-index: 1;
+    border-bottom: 0.04rem solid #fff;
+
+    .address-header {
+        text-align: left;
+        line-height: 0.35rem;
+        margin-left: 0.5em;
+        display: grid;
+        height: 100%;
+        width: 100%;
+        align-content: space-around;
+        //justify-content: center;
+        background: linear-gradient(272deg, #d8d8d8, #f1ebef);
+    }
+
+    .amount-header {
+        text-align: center;
+        line-height: 0.35rem;
+        display: grid;
+        height: 100%;
+        width: 100%;
+        align-content: space-around;
+        justify-content: center;
+        background: linear-gradient(272deg, #d8d8d8, #f1ebef);
+    }
+
+    .confirmation-header {
+        text-align: center;
+        line-height: 0.35rem;
+        display: grid;
+        height: 100%;
+        width: 100%;
+        align-content: space-around;
+        justify-content: center;
+        background: linear-gradient(272deg, #d8d8d8, #f1ebef);
+    }
+
+    .hash-header {
+        text-align: left;
+        line-height: 0.35rem;
+        display: grid;
+        height: 100%;
+        width: 100%;
+        align-content: space-around;
+        justify-content: center;
+        background: linear-gradient(272deg, #d8d8d8, #f1ebef);
+    }
+
+    span {
+        font-size: @normalFont;
+        color: @purpleDark;
+        font-weight: normal;
+    }
+
+    .account {
+        padding-left: 0.7rem;
+    }
+}

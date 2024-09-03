@@ -1,0 +1,199 @@
+/*
+ * (C) Bitxor Community 2022 
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and limitations under the License.
+ *
+ */
+/*
+ * (C) Bitxor Community 2022 
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and limitations under the License.
+ *
+ */
+/**
+ * Skin
+ **/
+@font-face {
+    font-family: 'noto-sans-bold';
+    src: url('./NotoSans-Bold.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'noto-sans-extrabold';
+    src: url('./NotoSans-ExtraBold.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'noto-sans-light';
+    src: url('./NotoSans-Light.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'noto-sans-medium';
+    src: url('./NotoSans-Medium.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'noto-sans-regular';
+    src: url('./NotoSans-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'noto-sans-semibold';
+    src: url('./NotoSans-SemiBold.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+/**
+ * Elements outline
+ **/
+/**
+ * Fonts
+ **/
+.create-mnemonic-sec {
+    position: relative;
+    width: 100%;
+}
+.create-mnemonic-sec .create-mnemonic-col .create-mnemonic-left {
+    width: 100%;
+}
+.create-mnemonic-sec .create-mnemonic-col .create-mnemonic-left .show-mnemonic {
+    width: 100%;
+    height: 260px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.create-mnemonic-sec .create-mnemonic-col .create-mnemonic-left .show-mnemonic img {
+    width: 60px;
+    margin-bottom: 10px;
+}
+.create-mnemonic-sec .create-mnemonic-col .create-mnemonic-left .show-mnemonic button {
+    width: auto;
+    margin-left: 0;
+    margin-bottom: 0.2rem;
+}
+.create-mnemonic-sec .create-mnemonic-col .create-mnemonic-left .button-container {
+    width: 100%;
+    clear: both;
+}
+.create-mnemonic-sec .create-mnemonic-col .create-mnemonic-left .button-container .download-button:hover,
+.create-mnemonic-sec .create-mnemonic-col .create-mnemonic-left .button-container .download-button:active {
+    color: white;
+    border-color: white;
+}
+.create-mnemonic-sec .create-mnemonic-col .create-mnemonic-right {
+    width: 100%;
+}
+.create-mnemonic-sec .create-mnemonic-col .create-mnemonic-right /deep/ .ivu-alert .ivu-alert-message {
+    font-size: 0.22rem;
+}
+.create-mnemonic-sec .create-mnemonic-col .create-mnemonic-right /deep/ .ivu-alert .ivu-alert-icon {
+    font-size: 0.4rem;
+    top: 0.25rem;
+    left: 0.05rem;
+}
+.create-mnemonic-sec .create-mnemonic-col .create-mnemonic-right /deep/ .ivu-alert.ivu-alert-warning {
+    background-color: transparent;
+    border: 1px solid rgba(51, 51, 51, 0.2);
+}
+.create-mnemonic-sec .create-mnemonic-col .create-mnemonic-right /deep/ .ivu-alert.ivu-alert-success {
+    background-color: transparent;
+    border: 1px solid rgba(51, 51, 51, 0.2);
+}
+.create-mnemonic-sec .create-mnemonic-col .create-mnemonic-right /deep/ .ivu-alert.ivu-alert-with-desc.ivu-alert-with-icon {
+    padding: 0.16rem 0.16rem 0.16rem 0.49rem;
+}
+.create-mnemonic-sec .mnemonic-container {
+    padding-top: 5px;
+    height: 260px;
+    border: 1px solid rgba(51, 51, 51, 0.2);
+    border-radius: 5px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+.create-mnemonic-sec .mnemonic-container .copy-button {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+.create-mnemonic-sec .mnemonic-container .copy-button img {
+    height: 0.2rem;
+    width: 0.2rem;
+}
+.create-mnemonic-sec .mnemonic-container > div:first-child {
+    display: flex;
+    flex-direction: row;
+}
+.create-mnemonic-sec .mnemonic-list {
+    padding: 10px;
+}
+.create-mnemonic-sec .mnemonic-list span {
+    display: inline-block;
+    background-color: #d3d3d3;
+    padding: 10px 20px;
+    border-radius: 4px;
+    margin: 5px;
+    font-size: 14px;
+    color: #117492;
+}
+.create-mnemonic-sec .mnemonic-qrcode {
+    padding: 0.05rem 0.1rem;
+    text-align: center;
+}
+.create-mnemonic-sec .mnemonic-qrcode img {
+    width: 2rem;
+}
+.create-mnemonic-sec .mnemonic-backup-options-desc {
+    display: grid;
+    grid-template-columns: 2.8rem 1.5rem;
+    column-gap: 0.1rem;
+}
+.create-mnemonic-sec .mnemonic-backup-options-desc .ivu-icon {
+    font-size: 0.48rem;
+    color: #888888;
+}
+.create-mnemonic-sec .mnemonic-backup-options-desc span {
+    margin: 0.1rem 0.05rem 0 0;
+    flex-direction: column;
+}
+.create-mnemonic-sec .mnemonic-backup-options-desc span p {
+    text-align: left;
+}
+.set-title-create {
+    color: #117492;
+    font-size: 0.25rem;
+    font-family: 'noto-sans-semibold';
+    margin-bottom: 20px;
+}
+.clipboard-icon {
+    width: 25px;
+    margin-left: 10px;
+}

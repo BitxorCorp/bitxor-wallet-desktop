@@ -1,0 +1,182 @@
+/*
+ * (C) Bitxor Community 2022 
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and limitations under the License.
+ *
+ */
+/*
+ * (C) Bitxor Community 2022 
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and limitations under the License.
+ *
+ */
+/**
+ * Skin
+ **/
+@font-face {
+    font-family: 'noto-sans-bold';
+    src: url('./NotoSans-Bold.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'noto-sans-extrabold';
+    src: url('./NotoSans-ExtraBold.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'noto-sans-light';
+    src: url('./NotoSans-Light.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'noto-sans-medium';
+    src: url('./NotoSans-Medium.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'noto-sans-regular';
+    src: url('./NotoSans-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'noto-sans-semibold';
+    src: url('./NotoSans-SemiBold.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+/**
+ * Elements outline
+ **/
+/**
+ * Fonts
+ **/
+.create-profile-wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.create-profile-wrapper .explanation-box {
+    flex: 0.3;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    min-height: calc(100vh - 255px);
+}
+.create-profile-wrapper .explanation-box .text-wrapper {
+    display: block;
+    width: 85%;
+}
+.create-profile-wrapper .explanation-box .text1 {
+    color: #117492;
+    font-size: 30px;
+    font-family: 16px;
+    margin-bottom: 5%;
+}
+.create-profile-wrapper .explanation-box .text {
+    color: #117492;
+    font-size: 18px;
+    margin-bottom: 2%;
+}
+.create-profile-wrapper .explanation-box .text_red {
+    color: #117492;
+    font-family: 'noto-sans-semibold';
+    font-size: 18px;
+}
+.create-profile-wrapper .form-box {
+    flex: 0.7;
+    min-height: 90%;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    min-height: calc(100vh - 255px);
+    max-width: 100%;
+}
+.create-profile-wrapper .form-box .steps {
+    width: 25%;
+    height: 100%;
+    display: flex;
+}
+.create-profile-wrapper .form-box .steps .step-group {
+    margin: auto;
+    width: 100%;
+}
+.create-profile-wrapper .form-box .steps .single-step {
+    padding: 8%;
+    font-size: 18px;
+    color: #d3d3d3;
+    font-family: 'noto-sans-semibold';
+    display: flex;
+}
+.create-profile-wrapper .form-box .steps .single-step.done {
+    color: #117492;
+}
+.create-profile-wrapper .form-box .steps .single-step.done:before {
+    content: '';
+    background-image: url('../../../resources/img/check.png');
+    background-size: 0.28rem 0.23rem;
+    display: inline-block;
+    width: 0.46rem;
+    height: 0.36rem;
+    background-repeat: no-repeat;
+}
+.create-profile-wrapper .form-box .steps .single-step.active {
+    background: linear-gradient(315.55deg, #007dbb -1.68%, #25c3f1 110.7%)
+    color: #ffffff;
+}
+.create-profile-wrapper .form-box .form {
+    flex: 1;
+    overflow: hidden;
+    border-left: 0.005rem solid #d3d3d3;
+    padding: 1rem 10%;
+    min-height: calc(100vh - 255px);
+    display: flex;
+    align-items: center;
+}
+.create-profile-wrapper .inner-container {
+    background: transparent;
+}
+.create-profile-wrapper .inner-container .create-profile-box {
+    margin-bottom: 40px;
+    font-size: 40px;
+    color: rgba(0, 0, 0, 0.85);
+    line-height: 40px;
+}
+.create-profile-wrapper .inner-container .step-bar-container .step-text-container span {
+    width: 20%;
+}
+.subtitle-info {
+    font-family: 'noto-sans-semibold';
+}
+.warning-icon {
+    width: 18px;
+    margin-right: 10px;
+}
+.success-title {
+    font-size: 45px;
+    color: #117492;
+}

@@ -1,0 +1,404 @@
+/*
+ * (C) Bitxor Community 2022 
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and limitations under the License.
+ *
+ */
+/*
+ * (C) Bitxor Community 2022 
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and limitations under the License.
+ *
+ */
+/**
+ * Skin
+ **/
+@font-face {
+    font-family: 'noto-sans-bold';
+    src: url('./NotoSans-Bold.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'noto-sans-extrabold';
+    src: url('./NotoSans-ExtraBold.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'noto-sans-light';
+    src: url('./NotoSans-Light.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'noto-sans-medium';
+    src: url('./NotoSans-Medium.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'noto-sans-regular';
+    src: url('./NotoSans-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'noto-sans-semibold';
+    src: url('./NotoSans-SemiBold.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+/**
+ * Elements outline
+ **/
+/**
+ * Fonts
+ **/
+.login-profile-wrapper {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(315.55deg, #26c3f2 -1.68%, #096a88 110.7%);
+    opacity: 1;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 999;
+}
+.login-profile-wrapper .video-background-section {
+    width: 100%;
+    height: 100%;
+    background-size: 100% 100%;
+}
+.login-profile-wrapper .welcome-box {
+    width: 17.2rem;
+    height: fit-content;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+}
+.login-profile-wrapper .welcome-box .banner-image {
+    width: 100%;
+    color: #ffffff;
+    padding: 0.3rem 0.4rem 0.4rem 0.4rem;
+    padding-right: 2rem;
+}
+.login-profile-wrapper .welcome-box .banner-image .top-welcome-text {
+    display: block;
+    font-size: 0.6rem;
+    font-weight: 500;
+    height: 0.84rem;
+    line-height: 0.7rem;
+    letter-spacing: 1.5;
+    margin-bottom: 0.54rem;
+    cursor: context-menu;
+    user-select: none;
+}
+.login-profile-wrapper .welcome-box .banner-image .bottom-welcome-text {
+    font-size: 20px;
+    line-height: 0.38rem;
+    font-weight: 400;
+    cursor: context-menu;
+    user-select: none;
+}
+.login-profile-wrapper .welcome-box .login-card {
+    float: right;
+    width: 4.2rem;
+    height: 6.2rem;
+    padding: 0.4rem 0.31rem 0 0.31rem;
+    background-color: #ffffff;
+    position: relative;
+    margin-right: 0.8rem;
+    border-radius: 10px;
+}
+.login-profile-wrapper .welcome-box .login-card /deep/ .ivu-select {
+    color: #117492;
+}
+.login-profile-wrapper .welcome-box .login-card /deep/ .ivu-select .ivu-select-dropdown {
+    top: unset !important;
+    left: unset !important;
+    width: 3.4rem !important;
+}
+.login-profile-wrapper .welcome-box .login-card /deep/ .ivu-select .ivu-select-selection .ivu-select-placeholder,
+.login-profile-wrapper .welcome-box .login-card /deep/ .ivu-select .ivu-select-selection .ivu-select-selected-value {
+    color: #000000 !important;
+}
+.login-profile-wrapper .welcome-box .login-card /deep/ .ivu-select .login-profile-network-type {
+    float: right;
+    color: #888888;
+}
+.login-profile-wrapper .welcome-box .login-card .img-box {
+    width: 2.3rem;
+    height: 0.72rem;
+    margin: 0 auto;
+    margin-bottom: 0.5rem;
+    background-repeat: no-repeat;
+    background-size: 2.3rem 0.72rem;
+    background-size: contain;
+    color: red;
+    background-position: 0 center;
+    background-image: url('../../resources/bitxor_logo.png');
+}
+.login-profile-wrapper .welcome-box .login-card .login-title {
+    font-size: 0.23rem;
+    font-weight: bold;
+    text-align: center;
+    color: #117492;
+    margin-bottom: 0.3rem;
+}
+.login-profile-wrapper .welcome-box .login-card /deep/ .ivu-tooltip {
+    width: 100%;
+}
+.login-profile-wrapper .welcome-box .login-card /deep/ input {
+    width: 100%;
+    height: 0.37rem;
+    background: #f2f2f2;
+    border: none;
+    padding-left: 0.11rem;
+    font-size: 16px;
+    color: #117492;
+    border-radius: 0;
+    margin-top: 0.1rem;
+}
+.login-profile-wrapper .welcome-box .login-card .profile-name,
+.login-profile-wrapper .welcome-box .login-card .input-password {
+    font-size: 0.22rem;
+    color: #117492;
+    font-weight: 400;
+}
+.login-profile-wrapper .welcome-box .login-card /deep/ .ivu-input:focus {
+    box-shadow: none;
+}
+.login-profile-wrapper .welcome-box .login-card .profile-name {
+    margin-bottom: 0;
+}
+.login-profile-wrapper .welcome-box .login-card .input-password {
+    margin-top: 0.22rem;
+}
+.login-profile-wrapper .welcome-box .login-card input::-webkit-input-placeholder {
+    color: #d3d3d3;
+}
+.login-profile-wrapper .welcome-box .login-card .password-tip {
+    padding-top: 0.2rem;
+    font-size: 12px;
+    font-weight: 400;
+    color: #117492;
+    line-height: 0.17rem;
+    display: flex;
+    min-height: 0.56rem;
+}
+.login-profile-wrapper .welcome-box .login-card .password-tip .prompt {
+    width: 100%;
+    background-color: transparent;
+    text-align: left;
+}
+.login-profile-wrapper .welcome-box .login-card .password-tip .create-profile {
+    width: 100%;
+    background-color: transparent;
+    text-align: right;
+}
+.login-profile-wrapper .welcome-box .login-card .button {
+    width: 1.8rem;
+    font-size: 0.18rem;
+    margin: 0 auto;
+    margin-top: 0.5rem;
+    height: 0.4rem;
+    border-radius: 0.05rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(315.55deg, #26c3f2 -1.68%, #0d5a72 110.7%);
+}
+.login-profile-wrapper .welcome-box .login-card .button /deep/ i {
+    margin-right: 0.07rem;
+}
+.login-profile-wrapper .welcome-box .login-card .button:hover {
+    background: linear-gradient(315.55deg, #26cef2 -1.68%, #07323b 110.7%);
+}
+.login-profile-wrapper .switch-language-container {
+    float: right;
+    z-index: 10001;
+    margin: 0.2rem;
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+.login-profile-wrapper .switch-language-container > img {
+    width: 24px;
+    height: 24px;
+}
+.login-profile-wrapper /deep/ .ivu-select-selection {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+}
+.login-profile-wrapper /deep/ .ivu-select-selection .ivu-select-placeholder,
+.login-profile-wrapper /deep/ .ivu-select-selection .ivu-select-selected-value {
+    color: #ffffff !important;
+    font-size: 14px;
+}
+.login-profile-wrapper /deep/ .ivu-select-selection i::before {
+    display: none;
+}
+.login-profile-wrapper /deep/ .ivu-select-item {
+    font-size: 14px !important;
+}
+.login-profile-wrapper .button {
+    background: #6401ee;
+    border-radius: 0.04rem;
+    border: none;
+    color: #ffffff;
+    text-align: center;
+    font-size: 0.28rem;
+    font-weight: 500;
+}
+.login-profile-wrapper .button:hover {
+    background: #468ca1;
+    color: #ffffff;
+}
+.login-profile-wrapper .button:active {
+    background: #117492;
+    color: #ffffff;
+}
+.login-profile-wrapper input {
+    height: 0.28rem;
+    padding-left: 0.1rem;
+    border: 1px solid #b4b4b4;
+    border-radius: 0.04rem;
+}
+.login-profile-wrapper .info-button,
+.login-profile-wrapper .info-button:focus {
+    background: #d3d3d3;
+    border-radius: 0.04rem;
+    color: #5b5b5b;
+}
+.login-profile-wrapper .info-button:hover {
+    background: #888888;
+    border-radius: 0.04rem;
+    color: #5b5b5b;
+}
+.login-profile-wrapper .info-button:active {
+    background: #888888;
+    border-radius: 0.04rem;
+    color: #5b5b5b;
+}
+.login-profile-wrapper .hint {
+    position: absolute;
+    margin-top: 0.1rem;
+    right: 0.47rem;
+}
+.login-profile-wrapper .select_account .ivu-select-dropdown {
+    z-index: 9999;
+}
+.login-profile-wrapper .network-type-head-title {
+    font-size: 14px;
+    font-weight: bold;
+}
+.login-profile-wrapper .auto-complete-sub-container {
+    max-height: 1.86rem;
+    padding: 0 0.2rem;
+}
+.login-profile-wrapper .auto-complete-sub-container /deep/ .ivu-select-item:hover {
+    background-color: #117492 !important;
+    color: #ffffff;
+}
+.login-profile-wrapper /deep/ .ivu-input:focus {
+    border: none;
+}
+.login-profile-wrapper .ivu-auto-complete.ivu-select-dropdown {
+    z-index: 9999;
+}
+.login-profile-wrapper .select-account {
+    position: relative;
+}
+.login-profile-wrapper .tips-in-sub-container {
+    font-size: 12px;
+    color: #b4b4b4;
+    padding: 0.1rem 0;
+}
+.login-profile-wrapper .version-panel {
+    position: absolute;
+    bottom: 0.2rem;
+    right: 0.2rem;
+    color: white;
+    font-size: 14px;
+    z-index: 3;
+}
+.login-profile-wrapper .copyright_label {
+    position: absolute;
+    color: white;
+    font-size: 14px;
+    left: 0.2rem;
+    bottom: 0.2rem;
+    z-index: 3;
+}
+.login-profile-wrapper .update-box {
+    background-color: #ffffcc;
+    position: relative;
+    margin-top: 0.05rem;
+    text-align: center;
+    height: 0.3rem;
+    width: 100%;
+    display: inline-block;
+    font-size: larger;
+    line-height: 0.3rem;
+    z-index: 10000;
+}
+.login-profile-wrapper .download-text-color {
+    position: relative;
+    color: #44004e;
+    z-index: 10000;
+}
+.profile-name-input .ivu-input {
+    background-color: transparent !important;
+    font-size: 12px;
+}
+.disabled {
+    cursor: default !important;
+}
+.trigger-accountlink {
+    font-size: 14px !important;
+    color: #117492;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    z-index: 100000;
+    cursor: pointer;
+    padding-bottom: 2px;
+    margin-right: 15px;
+}
+.trigger-accountlink .white {
+    color: #ffffff;
+}
+.navbar-icon {
+    margin-right: 10px;
+    font-size: 25px;
+    color: white;
+}

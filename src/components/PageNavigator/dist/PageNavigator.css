@@ -1,0 +1,143 @@
+/*
+ * (C) Bitxor Community 2022 
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and limitations under the License.
+ *
+ */
+/*
+ * (C) Bitxor Community 2022 
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and limitations under the License.
+ *
+ */
+/**
+ * Skin
+ **/
+@font-face {
+    font-family: 'noto-sans-bold';
+    src: url('./NotoSans-Bold.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'noto-sans-extrabold';
+    src: url('./NotoSans-ExtraBold.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'noto-sans-light';
+    src: url('./NotoSans-Light.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'noto-sans-medium';
+    src: url('./NotoSans-Medium.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'noto-sans-regular';
+    src: url('./NotoSans-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'noto-sans-semibold';
+    src: url('./NotoSans-SemiBold.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+/**
+ * Elements outline
+ **/
+/**
+ * Fonts
+ **/
+.wrap .left-navigator {
+    height: 100%;
+    width: 250px;
+    background-color: #ffffff;
+    color: #117492;
+    font-size: 16px;
+}
+.wrap .left-navigator .navigator-items-container {
+    overflow: hidden;
+    height: calc(100% - 200px);
+}
+.wrap .left-navigator .navigator-item-container {
+    width: 100%;
+    height: 70px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color: #ffffff;
+    cursor: pointer;
+}
+.wrap .left-navigator .navigator-item-container .navigator-icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 85px;
+}
+.wrap .left-navigator .navigator-item-container .navigator-icon-container .navigator-icon {
+    width: 35px;
+}
+.wrap .left-navigator .navigator-item-container .navigator-icon-container .ivu-icon {
+    color: #117492;
+}
+.wrap .left-navigator .navigator-item-container .navigator-text-container {
+    flex: 1;
+    padding-left: 10px;
+    text-align: left;
+}
+.wrap .left-navigator .active {
+    background: #f3f4f8;
+    opacity: 1;
+    cursor: not-allowed;
+    border-right: 0.3em #26c3f2 solid;
+    padding-right: 0.5em;
+    font-weight: bold;
+}
+.logo-container {
+    text-align: center;
+    width: 100%;
+    height: 100px;
+}
+.logo-container img {
+    width: auto;
+    max-height: 100px;
+    padding: 25px;
+}
+.network-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    width: 250px;
+    height: 100px;
+    text-align: center;
+    border-top: 1px solid #d3d3d3;
+    background-color: #ffffff;
+}

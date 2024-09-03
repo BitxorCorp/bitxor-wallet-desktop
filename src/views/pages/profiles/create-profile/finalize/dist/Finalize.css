@@ -1,0 +1,43 @@
+.finish-sec {
+    max-height: calc(100% - 1.4rem);
+}
+.finish-sec .finish-col {
+    display: flex;
+}
+.finish-sec .finish-col .finish-left {
+    width: 9rem;
+    position: relative;
+}
+.finish-sec .finish-right img {
+    width: 3rem;
+}
+.finish-sec .set-title-tips {
+    margin: 0.2rem 0;
+}
+.finish-sec .text {
+    padding-bottom: 0.1rem;
+}
+.finish-sec .text1 {
+    padding-top: 0.3rem;
+}
+.list-item-with-disc {
+    list-style-type: disc;
+}
+.buttons {
+    margin-top: 60px;
+}
+.checkbox-label {
+    margin-left: 0.04rem;
+    font-size: 0.18rem;
+    color: #26c3f2;
+}
+.checkbox-label a {
+    color: #0b7392;
+    font-size: 0.18rem;
+}
+.checkbox-label a:hover {
+    color: #024458;
+}
+.checkbox {
+    margin-top: 0.4rem;
+}

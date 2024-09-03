@@ -1,0 +1,176 @@
+/*
+ * (C) Bitxor Community 2022 
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and limitations under the License.
+ *
+ */
+/*
+ * (C) Bitxor Community 2022 
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and limitations under the License.
+ *
+ */
+/**
+ * Skin
+ **/
+@font-face {
+    font-family: 'noto-sans-bold';
+    src: url('./NotoSans-Bold.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'noto-sans-extrabold';
+    src: url('./NotoSans-ExtraBold.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'noto-sans-light';
+    src: url('./NotoSans-Light.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'noto-sans-medium';
+    src: url('./NotoSans-Medium.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'noto-sans-regular';
+    src: url('./NotoSans-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'noto-sans-semibold';
+    src: url('./NotoSans-SemiBold.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+/**
+ * Elements outline
+ **/
+/**
+ * Fonts
+ **/
+.balances-panel-outer-container .balances-panel-container {
+    display: grid;
+    height: 100%;
+    grid-template-columns: 100%;
+    grid-template-rows: 2.4rem auto;
+    grid-row-gap: 0.3rem;
+}
+.tokenListWrap {
+    height: 100%;
+}
+.account-info-tile {
+    background-color: #ffffff;
+}
+.top_account_address.grayed {
+    background-color: #888888;
+}
+.top_account_address.purpled {
+    background-color: #468ca1;
+}
+.top_account_address {
+    width: 100%;
+    height: 2.4rem;
+    padding: 0.13rem 0.2rem 0 0.21rem;
+    position: relative;
+    background-size: cover;
+    background: linear-gradient(315.55deg, #26cef2 -1.68%, #1f9fba 110.7%);
+    border-radius: 8px;
+}
+.top_account_address .account_address {
+    padding-bottom: 0.15rem;
+    display: flex;
+    justify-content: space-between;
+}
+.top_account_address .account_address .address-label {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 100;
+    display: inline-block;
+}
+.top_account_address .account_address .address {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 100;
+    display: inline-block;
+    width: 3.6rem;
+    word-break: break-word;
+}
+.top_account_address .account_address img {
+    float: right;
+    width: 0.22rem;
+    height: 0.22rem;
+}
+.top_account_address .account_address .copy-button {
+    height: max-content;
+    margin-top: 0.34rem;
+}
+.top_account_address .XEM_amount {
+    margin-top: 0.29rem;
+    font-size: 20px;
+    font-weight: 500;
+    color: #ffffff;
+}
+.top_account_address .amount {
+    line-height: 1;
+}
+.top_account_address .balance-background {
+    width: 1.29rem;
+    height: 1.22rem;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+/deep/ .bxr-outline {
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+.bottom_account_info {
+    width: 100%;
+    padding: 0.27rem 0.18rem 0.27rem 0.28rem;
+    position: relative;
+    display: grid;
+    grid-template-rows: 100%;
+    grid-template-columns: 100%;
+    overflow-y: hidden;
+    background-color: white;
+    border-radius: 8px;
+}
+.bottom_account_info .ivu-tabs-tab-active {
+    color: #468ca1;
+}
+.bottom_account_info .ivu-tabs-tab:hover {
+    color: #468ca1;
+}
+.bottom_account_info .ivu-tabs-ink-bar {
+    background-color: #117492;
+}
+.tokenListWrap {
+    height: 100%;
+    display: block;
+    overflow: hidden;
+}

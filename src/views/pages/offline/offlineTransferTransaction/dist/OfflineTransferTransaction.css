@@ -1,0 +1,239 @@
+/*
+ * (C) Bitxor Community 2022 
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and limitations under the License.
+ *
+ */
+/**
+ * Skin
+ **/
+@font-face {
+    font-family: 'noto-sans-bold';
+    src: url('./NotoSans-Bold.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'noto-sans-extrabold';
+    src: url('./NotoSans-ExtraBold.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'noto-sans-light';
+    src: url('./NotoSans-Light.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'noto-sans-medium';
+    src: url('./NotoSans-Medium.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'noto-sans-regular';
+    src: url('./NotoSans-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'noto-sans-semibold';
+    src: url('./NotoSans-SemiBold.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+/**
+ * Elements outline
+ **/
+/**
+ * Fonts
+ **/
+#main-container {
+    display: grid;
+    grid-template-rows: 0.8rem auto;
+}
+.title-container {
+    padding: 0 0.4rem;
+    margin: 0.2rem 0;
+}
+.title-container .step {
+    font-family: 'noto-sans-regular';
+    font-size: 18px;
+    margin-right: 0.2rem;
+    margin-left: 0.2rem;
+}
+.title-container .step.active {
+    font-weight: 600;
+    color: #117492;
+}
+.title-container .step.inactive {
+    font-weight: 'noto-sans-light';
+    color: #888888;
+}
+.account-detail-outer-container {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: auto 0.5rem;
+    background-color: #ffffff;
+    border-radius: 0.04rem;
+}
+.account-detail-outer-container .account-detail-inner-container {
+    width: 100%;
+    padding: 0.2rem 0.4rem;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: auto;
+}
+.account-detail-outer-container .account-detail-inner-container .right-container {
+    width: 100%;
+}
+.account-detail-outer-container .account-detail-inner-container .right-container .title-row {
+    font-size: 20px;
+}
+.account-detail-outer-container .account-detail-inner-container .right-container .account-details-container {
+    height: 100%;
+    display: grid;
+}
+.account-detail-outer-container .account-detail-inner-container .right-container .right-container-title {
+    font-size: 16px;
+    color: #222;
+    font-weight: 500;
+}
+.account-detail-outer-container .account-detail-inner-container .right-container .account-details-grid {
+    background-color: white;
+    font-size: 16px;
+    display: inline-grid;
+    color: #468ca1;
+    grid-auto-rows: 0.5rem;
+    padding-left: 10px;
+}
+.account-detail-outer-container .account-detail-inner-container .right-container .detail-row {
+    grid-row: span 1;
+}
+.account-detail-outer-container .account-detail-inner-container .right-container .detail-double-row {
+    grid-row: span 2;
+}
+.account-detail-outer-container .account-detail-inner-container .right-container .account-detail-row-3cols {
+    display: grid;
+    grid-template-columns: 1.4rem 5rem auto;
+}
+.account-detail-outer-container .account-detail-inner-container .right-container .account-detail-row {
+    display: grid;
+    grid-template-columns: 1.4rem 5rem;
+}
+.account-detail-outer-container .account-detail-inner-container .right-container .account-detail-cosignatory {
+    display: grid;
+    grid-template-rows: auto rem;
+}
+.account-detail-outer-container .account-detail-inner-container .right-container .account-detail-row font .label,
+.account-detail-outer-container .account-detail-inner-container .right-container .account-detail-row-3cols font .label {
+    font-family: 'noto-sans-medium';
+    font-weight: bold;
+    margin-right: 10px;
+    width: 1.4rem;
+}
+.account-detail-outer-container .account-detail-inner-container .right-container .account-detail-row /deep/ .value,
+.account-detail-outer-container .account-detail-inner-container .right-container .account-detail-row-3cols /deep/ .value {
+    font-family: 'noto-sans-light';
+    text-overflow: ellipsis;
+    color: #117492;
+}
+.account-detail-outer-container .account-detail-inner-container .right-container .account-detail-row .select-style .ivu-select-selection,
+.account-detail-outer-container
+    .account-detail-inner-container
+    .right-container
+    .account-detail-row-3cols
+    .select-style
+    .ivu-select-selection {
+    height: auto;
+}
+.account-detail-outer-container .account-detail-inner-container .left-container /deep/ .qr-code-image {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+.account-detail-outer-container .account-actions-outer-container {
+    background-color: lightgray;
+    width: 100%;
+    padding: 25px 0 0 0;
+}
+.account-detail-outer-container .account-actions-outer-container .account-actions-inner-container {
+    background-color: lightseagreen;
+    width: 100%;
+    border-radius: 0.04rem;
+}
+.transaction-form-container {
+    overflow: auto;
+    padding-left: 0.1rem;
+}
+.action-buttons {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    margin-right: 1rem;
+}
+.action-buttons .buttonD {
+    padding-right: 20px;
+    padding-left: 20px;
+}
+.single-step {
+    padding: 0.2rem;
+    font-size: 18px;
+    color: #d3d3d3;
+    font-family: 'noto-sans-semibold';
+}
+.single-step.done {
+    color: #117492;
+}
+.single-step.done:before {
+    content: '';
+    background-image: url('../../../resources/img/check.png');
+    background-size: 0.25rem 0.2rem;
+    background-position: center;
+    display: inline-block;
+    width: 0.46rem;
+    height: 0.36rem;
+    background-repeat: no-repeat;
+}
+.single-step.active {
+    background: linear-gradient(315.55deg, #007dbb -1.68%, #25c3f1 110.7%)
+    color: #ffffff;
+}
+.title {
+    color: #117492;
+    font-size: 23px;
+    font-family: 16px;
+    margin-bottom: 0.1rem;
+}
+.description-text {
+    color: #117492;
+    font-size: 14px;
+    margin-top: 0.3rem;
+}
+.description-text .mt {
+    margin-top: 0.25rem;
+}
+.raw-json {
+    width: 80%;
+    text-align: center;
+    word-break: break-all;
+    font-size: 12px;
+}
+/deep/ .qrcode-display {
+    width: 1.9rem;
+}
+/deep/ .qrcode-display img {
+    width: 1.4rem;
+}

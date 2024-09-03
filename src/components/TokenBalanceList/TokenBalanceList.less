@@ -1,0 +1,363 @@
+/*
+ * (C) Bitxor Community 2022 
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and limitations under the License.
+ *
+ */
+@import '../../views/resources/css/variables.less';
+
+.toggle_all_checked {
+    margin: 0.1rem 0;
+    font-size: 0.16rem;
+    height: 0.2rem;
+    width: 100%;
+    line-height: 0.2rem;
+    display: flex;
+    align-items: center;
+    padding: 0.2rem 0;
+
+    span {
+        min-width: 1.5rem;
+        display: flex;
+        align-items: center;
+        margin-right: 0.1rem;
+        cursor: pointer;
+    }
+}
+
+.false {
+    width: 0.2rem;
+    height: 0.2rem;
+    background-image: url('../../views/resources/img/monitor/tokens/unselected.png');
+    background-repeat: no-repeat;
+    background-size: 0.2rem;
+    margin-right: 0.1rem;
+    cursor: pointer;
+}
+
+.true {
+    width: 0.2rem;
+    height: 0.2rem;
+    background-image: url('../../views/resources/img/monitor/tokens/selected.png');
+    background-repeat: no-repeat;
+    background-size: 0.2rem;
+    margin-right: 0.1rem;
+    cursor: pointer;
+}
+
+.tokenList {
+    display: block;
+    padding: 0.1rem 0.13rem 0.13rem 0.13rem;
+
+    .complete_container {
+        width: 100%;
+        height: 0.8rem;
+        background-color: @white;
+        padding-top: 0.2rem;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: 1;
+    }
+
+    .complete {
+        width: 1.5rem;
+        height: 0.44rem;
+        border-radius: 0.22rem;
+        border: 0.01rem solid @border;
+        text-align: center;
+        line-height: 0.44rem;
+        cursor: pointer;
+        font-size: 0.16rem;
+        font-weight: 400;
+        color: @purple;
+        position: absolute;
+        margin-left: 50%;
+        left: -0.75rem;
+    }
+}
+
+.tokenList::-webkit-scrollbar {
+    display: none;
+}
+
+.asset_setting_tit {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 0.16rem;
+    font-weight: 400;
+    color: @blackLight;
+    height: 0.24rem;
+
+    img {
+        margin-right: 0.19rem;
+        width: 0.08rem;
+        height: 0.16rem;
+        position: relative;
+        bottom: 0.02rem;
+    }
+}
+
+.searchToken {
+    .token_data {
+        .token_name {
+            left: 0.7rem;
+        }
+    }
+}
+
+.search {
+    position: absolute;
+    display: inline-block;
+    width: 0.6rem;
+    font-size: @normalFont;
+    text-align: center;
+    right: -0.6rem;
+    color: @purple;
+}
+
+.input_outter {
+    width: 2.8rem;
+    height: 0.4rem;
+    display: flex;
+    position: absolute;
+    top: 0.2rem;
+    left: 0.6rem;
+    align-items: center;
+    flex-direction: row;
+
+    img {
+        width: 0.18rem;
+        height: 0.18rem;
+        margin: 0 0.1rem 0 0.1rem;
+    }
+
+    border: 0.01rem solid @border;
+    border-radius: 0.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    input {
+        border: none;
+        width: 2.8rem;
+    }
+}
+
+.token_data {
+    height: 0.65rem;
+    padding: 0.15rem 0.25rem 0.15rem 0;
+    display: inline-flex;
+    flex-direction: row;
+    width: 100%;
+    justify-items: center;
+    //justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    border-bottom: 0.01rem solid rgba(255, 255, 255, 0.6);
+    position: relative;
+
+    .namege_img {
+        position: relative;
+        display: flex;
+        align-items: center;
+        //top: 0.17rem;
+       
+       
+    }
+    .tokenIcon {
+          
+       
+        margin-left: 0.2rem;
+    }
+    .grayed-bxr-logo {
+        opacity: 0.4;
+        -webkit-filter: grayscale(100%);
+        -moz-filter: grayscale(100%);
+        -o-filter: grayscale(100%);
+        -ms-filter: grayscale(100%);
+        filter: grayscale(100%);
+    }
+ /*   .img_container::before{
+        content: "";
+  position: absolute;
+  top: -0.1rem;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 0.2rem solid transparent;
+  border-right: 0.2rem solid transparent;
+  border-bottom: 0.1rem solid #25c3f1;
+}
+.img_container::after{
+    content: "";
+  position: absolute;
+  bottom: -0.1rem;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 0.2rem solid transparent;
+  border-right: 0.2rem solid transparent;
+  border-top: 0.1rem solid #25c3f1;
+} */
+    .img_container {
+        display: inline-block;
+        position: relative;
+      // top: 0.12rem;
+        margin-right: 0.05rem;
+        
+
+        img {
+            display: inline-block;
+            width: 0.4rem;
+            height: 0.4rem;
+        }
+
+        img.grayed-bxr-logo {
+            opacity: 0.4;
+            -webkit-filter: grayscale(100%);
+            -moz-filter: grayscale(100%);
+            -o-filter: grayscale(100%);
+            -ms-filter: grayscale(100%);
+            filter: grayscale(100%);
+        }
+    }
+
+    .token_name {
+        position: initial;
+        top: 0;
+        left: 0.4rem;
+        width: 3.5rem;
+        font-size: 0.21rem;
+        font-weight: 400;
+        color: @purpleDark;
+        padding-left: 0.2rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .token_value {
+        margin-left: 0.5rem;
+        text-align: right;
+        color: @purpleDark;
+        width: 100%;
+
+        div:first-of-type {
+            font-size: 0.16rem;
+            font-weight: 400;
+            color: @blackLight;
+        }
+
+        div:nth-of-type(2) {
+            font-size: 0.16rem;
+            font-weight: 400;
+            color: @grayDark;
+        }
+    }
+
+    .small_icon {
+        width: 0.2rem;
+        height: 0.2rem;
+       // margin-bottom: 0.05rem;
+    }
+}
+
+.padding_top_0 {
+  //  padding-top: 0 !important;
+    //height: 0.55rem !important;
+}
+
+.padding_top_0 .namege_img {
+   // top: 0.1rem !important;
+}
+
+.padding_top_0 .token_value {
+  //  padding-top: 0.1rem !important;
+   // margin-left: 0.7rem;
+}
+
+/deep/.ivu-tabs-tab {
+    font-size: @bigFont !important;
+    color: #fff !important;
+    padding: 0.08rem 0.1rem !important;
+    font-weight: @bold;
+    height: 0.45rem;
+}
+
+/deep/.ivu-tabs-ink-bar {
+    background-color: transparent !important;
+    border: none !important;
+}
+
+/deep/.ivu-tabs-bar {
+    margin-bottom: 0 !important;
+    position: relative;
+    padding: 0.13rem 0.13rem 0.13rem 0.13rem;
+    .asset_list {
+        width: 0.24rem;
+        position: absolute;
+        bottom: 0.08rem;
+        right: 0.21rem;
+        top: 37%;
+        z-index: 1;
+    }
+    background: linear-gradient(63deg, #969290, #d8d8d8);
+    border-bottom: 0.02rem solid #fff !important;
+    border-top: 0.02rem solid #fff !important;
+    height: 0.7rem;
+   // border: none !important;
+   //    border-color: transparent !important;
+}
+
+.tokens-list-container {
+
+    background: linear-gradient(63deg, #d8d8d8, #F1ebef);
+    border-bottom-left-radius: 0.15rem;
+    border-bottom-right-radius: 0.15rem;
+    overflow: auto;
+    /deep/.ivu-tabs {
+        height: 100%;
+        .ivu-tabs-content {
+        padding: 0.1rem 0.13rem 0.13rem 0.13rem;
+            height: calc(100% - 0.45rem);
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+            overflow-y: auto;
+        }
+    }
+}
+
+.token-balance-list-tabs-container {
+    height: 100%;
+    position: relative;
+}
+
+/deep/.ivu-tabs-content {
+    display: block;
+    overflow: visible;
+    height: 100%;
+}
+
+/deep/.ivu-tabs-tabpane {
+    height: 100%;
+    position: relative;
+    overflow-y: overlay;
+    display: block !important;
+}
+
+.toggle-token-display-icon {
+    height: 0.2rem;
+    width: 0.2rem;
+    margin-right: 0.13rem;
+}

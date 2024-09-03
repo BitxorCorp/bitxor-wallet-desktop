@@ -1,0 +1,131 @@
+/*
+ * (C) Bitxor Community 2022 Foundation
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and limitations under the License.
+ *
+ */
+
+import { NetworkType } from 'bitxor-sdk';
+import { ProfileModelStorage } from '@/core/database/storage/ProfileModelStorage';
+import { ObjectStorageBackend } from '@/core/database/backends/ObjectStorageBackend';
+import { SimpleObjectStorage } from '@/core/database/backends/SimpleObjectStorage';
+import { VersionedModel } from '@/core/database/entities/VersionedModel';
+import { ProfileModel } from '@/core/database/entities/ProfileModel';
+
+describe('storage/ProfileModelStorage.spec ==>', () => {
+    describe('constructor() should', () => {
+        test('Should upgrade testnet only on v8', () => {
+            const profiles = {
+                version: 7,
+                data: {
+                    someMainnetProfile: {
+                        profileName: 'someMainnetProfile',
+                        accounts: ['1', '2', '3'],
+                        seed: 'SomeSeed2',
+                        password: 'myPassword2',
+                        hint: '',
+                        networkType: NetworkType.MAIN_NET,
+                        generationHash: '57F7DA205008026C776CB6AED843393F04CD458E0AA2D9F1D5F31A402072B2D6',
+                        termsAndConditionsApproved: false,
+                        selectedNodeUrlToConnect: 'http://ngl-dual-001.bitxor.io:3000',
+                    },
+                    someTestnetProfile: {
+                        profileName: 'someTestnetProfile',
+                        accounts: ['a', 'b', 'c'],
+                        seed: 'SomeSeed',
+                        password: 'myPassword',
+                        hint: '',
+                        networkType: NetworkType.TEST_NET,
+                        generationHash: '45FBCF2F0EA36EFA7923C9BC923D6503169651F7FA4EFC46A8EAF5AE09057EBD',
+                        termsAndConditionsApproved: false,
+                        selectedNodeUrlToConnect: 'http://api-01.us-west-1.testnet.bitxor.network:3000',
+                    },
+                },
+            };
+            const delegate = new SimpleObjectStorage<VersionedModel<Record<string, ProfileModel>>>(
+                'profiles',
+                new ObjectStorageBackend({
+                    profiles: JSON.stringify(profiles),
+                }),
+            );
+            const storage = new ProfileModelStorage(delegate);
+            const migratedData = storage.get();
+            const expected = {
+                someMainnetProfile: {
+                    profileName: 'someMainnetProfile',
+                    accounts: ['1', '2', '3'],
+                    seed: 'SomeSeed2',
+                    password: 'myPassword2',
+                    hint: '',
+                    networkType: NetworkType.MAIN_NET,
+                    generationHash: '57F7DA205008026C776CB6AED843393F04CD458E0AA2D9F1D5F31A402072B2D6',
+                    termsAndConditionsApproved: false,
+                    selectedNodeUrlToConnect: 'http://ngl-dual-001.bitxor.io:3000',
+                },
+                someTestnetProfile: {
+                    profileName: 'someTestnetProfile',
+                    accounts: ['a', 'b', 'c'],
+                    seed: 'SomeSeed',
+                    password: 'myPassword',
+                    hint: '',
+                    networkType: NetworkType.TEST_NET,
+                    generationHash: '7FCCD304802016BEBBCD342A332F91FF1F3BB5E902988B352697BE245F48E836',
+                    termsAndConditionsApproved: false,
+                    selectedNodeUrlToConnect: migratedData.someTestnetProfile.selectedNodeUrlToConnect,
+                },
+            };
+
+            expect(migratedData).toEqual(expected);
+            expect(delegate.get()).toEqual({ version: 8, data: migratedData });
+        });
+
+        test('Should not upgrade, testnet already v8', () => {
+            const profiles = {
+                version: 8,
+                data: {
+                    someMainnetProfile: {
+                        profileName: 'someMainnetProfile',
+                        accounts: ['1', '2', '3'],
+                        seed: 'SomeSeed2',
+                        password: 'myPassword2',
+                        hint: '',
+                        networkType: NetworkType.MAIN_NET,
+                        generationHash: '57F7DA205008026C776CB6AED843393F04CD458E0AA2D9F1D5F31A402072B2D6',
+                        termsAndConditionsApproved: false,
+                        selectedNodeUrlToConnect: 'http://ngl-dual-001.bitxorblockchain.io:3000',
+                    },
+                    someTestnetProfile: {
+                        profileName: 'someTestnetProfile',
+                        accounts: ['a', 'b', 'c'],
+                        seed: 'SomeSeed',
+                        password: 'myPassword',
+                        hint: '',
+                        networkType: NetworkType.TEST_NET,
+                        generationHash: '57F7DA205008026C776CB6AED843393F04CD458E0AA2D9F1D5F31A402072B2D6',
+                        termsAndConditionsApproved: false,
+                        selectedNodeUrlToConnect: 'http://api-01.testnet.bitxor.network:3000',
+                    },
+                },
+            };
+            const delegate = new SimpleObjectStorage<VersionedModel<Record<string, ProfileModel>>>(
+                'profiles',
+                new ObjectStorageBackend({
+                    profiles: JSON.stringify(profiles),
+                }),
+            );
+            const storage = new ProfileModelStorage(delegate);
+            const migratedData = storage.get();
+            expect(migratedData).toEqual(profiles.data);
+            expect(delegate.get()).toEqual(profiles);
+        });
+    });
+});
